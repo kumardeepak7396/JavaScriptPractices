@@ -1,0 +1,14 @@
+console.log("Deepak Kumar");
+console.log("Welcome To Javascript");
+// The above sentence means print the data on console where the meaning of console.log is to print(log) the data (Welcome To Javascript) on browser's console 
+
+fullname = "Deepu Maurya";
+age = 24;
+price = 30.99;
+//  Here fullname, age and price are variables which we called container in which we stores different 
+//  forms of data like: numbers, strings, boolean, null and undefined.
+
+
+console.log(fullname);
+console.log(age);
+console.log(price);
