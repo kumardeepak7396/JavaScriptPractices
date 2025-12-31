@@ -1,0 +1,279 @@
+// Functions : block of code that performs a specific task, can be invoked whenever needed
+// Some type of functions given below
+// console.log("Hello");
+// "abc".toUpperCase();
+// [23, 34, 56].push(76)
+
+// How to create a function that works: We make functions in two steps
+
+// First we create function-definition then function call
+// function functionName() {
+
+//      do some works
+
+// }
+ 
+// functionName();
+
+// ex- 
+
+// function myFunction() {
+//     console.log("hello");
+//     console.log("how are you?")
+// }
+
+// myFunction();
+// myFunction(); // if we have to print them two times we use function call two times as you see. it save a code from redundancy.
+
+// function myFun(msg) {
+//     console.log(msg);
+// }
+
+// myFun("I Love")
+
+// Function -- 2 numbers-- sum
+
+// function sum(x,y){
+//     console.log(x+y);
+// }
+// sum(3,5);
+
+// function sum(a,b) {
+//     s = a + b; // a and b are parameter of function and act as local scope variable
+//     return s;
+// }
+
+// let res = sum(56,44);
+// console.log(res);
+
+// Arrow functions: compact way of writting a function, used in modern JS
+
+// const functionName = (param1, param2) => {
+
+//     do some work
+// }
+
+// ex-
+
+// const arrowsum = (a,b) => {
+//     console.log(a+b);
+// }
+ 
+// arrowsum(3,5);
+
+// let arrowmul = (a,b) {
+//                return a*b;
+// }
+
+
+// const printHellow = () => {
+//     console.log("hellow");
+// }
+
+// or 
+
+// const printHello = () => console.log("hellow");
+
+
+// Ques 01- Create a function using the "function" keyword that takes a string as an argument & returns the number of vowels in the string.
+// Solution  :
+
+            //  function vowels(str) {
+            //     let count = 0;
+            //     for (const char of str) {
+            //             if ( char === "a" || char === "e" || char === "u" || char === "i" || char === "o") {
+            //                 count++;
+            //             }
+            //     }
+            //     console.log(count);
+            //  }
+            //  vowels("deepak");
+
+
+
+// Ques 02- Create an arrow function to perform the same task.
+// Solution :
+//           
+        //    const vowels = (str) => {
+        //          let count = 0;
+        //          for ( const char of str){
+        //             if ( char === "a" || char === "e" || char === "u" || char === "i" || char === "o") {
+        //                     count++;
+        //                  }
+        //          }
+        //          console.log(count);
+        //    }
+
+
+//         1. Function in JavaScript
+
+// A function is a standalone block of code. It does not belong to an object.
+
+// Example:
+// function greet(name) {
+//   return `Hello, ${name}`;
+// }
+
+// console.log(greet("Deepak"));
+
+
+// ✅ Key points:
+
+// Defined independently
+
+// Called by its name
+
+// Not tied to any object
+
+// 
+// 2. Method in JavaScript
+
+// A method is a function that is a property of an object.
+
+// Example:
+// const user = {
+//   name: "Deepak",
+//   greet: function () {
+//     return `Hello, ${this.name}`;
+//   }
+// };
+
+// console.log(user.greet());
+
+
+// ✅ Key points:
+
+// Function inside an object
+
+// Called using object reference
+
+// Uses this to access object data
+
+// forEach loop in Arrays
+//  arr.forEach(callBackFunction)
+// CallbackFunction: Here, it is a function to execute for each elements in the array.
+//  *A callback is a function passed as an argument to another function.
+
+//  arr.forEach((val) => {
+//       console.log(val):
+
+//  })
+
+// ex-
+
+// let arr = ["Prayagraj", "Varanasi", "Patna", "Mirzapur"];
+
+// arr.forEach((val,idx,arr) => { // Val is a parameter of this function but two parameters also exist that are 
+//     // idx and arr itself
+//     console.log(val,idx,arr);
+// })
+
+//  * A Higher-Order Function (HOF) in JavaScript is a function that does at least one of these:
+
+// 1. Takes another function as an argument
+// 2. Returns a function
+
+// Ques 03- For a given array of number,print the square of each value using the forEach loop.
+//  solution   : 
+
+// let aar = [1,2,3,4,5,6,7,8,9];
+// aar.forEach((val) => {
+//     console.log(`The square of ${val} is ${val*val}`);
+// })
+
+// or
+
+// let calSquare = aar.forEach((val) => {
+//     console.log(`The square of ${val} is ${val*val}`);
+// })
+
+
+
+
+
+// Some More Array Method
+
+// 1. map : Creates a new array with the results of some operation. The value its callback returns
+// are used to form new array
+// syntax : arr.map(callbackFnx(value,idx,array))
+
+// ex-
+// let arr = [1,2,3,4,5];
+
+// let addNum = arr.map((val) => {
+//         return val + 30;
+// });
+// console.log(addNum);
+
+// 2. Filter : Creates a new array of elements that give true for a condition/filter.
+
+// ex- 
+// let arr = [1,2,3,4,5];
+
+// let newArr = arr.filter((val) => {
+//         return val%2 === 0;
+// });
+
+// console.log(newArr);
+
+// 3. Reduce : Performs some operations & reduces the array to a single value. It returns
+// that single value.
+
+// let arr = [1,2,3,4,5];
+
+// let newArr = arr.reduce((prev,curr) => {
+//         return prev + curr;
+// })
+
+// console.log(newArr);
+
+// * Finding a greater number from array
+
+// let arr = [34,78,98,78,30];
+// let newArr = arr.reduce((prev,curr) => {
+//          return prev > curr ? prev : curr;
+//  })
+
+//  console.log(newArr);
+
+
+// Ques 04 : We are given array of marks of students. Filter our of the marks of students that scored 90+.
+// Solution : 
+
+// let marks = [67, 89, 94, 45,78];
+
+// let res = marks.filter((val) => {
+//         return val > 90;
+// })
+
+// Ques 05 : Take a number n as input from user. Create an array of numbers from 1 to n.
+//           use the reduce method to calculete sum of all numbers in the array.
+//           
+// Solution : 
+        //       let n = prompt("Enter a number");
+        //       let arr = [];
+        //       for (let i = 1; i<= n; i++) {
+        //         arr[i-1] = i;
+
+        //       }
+              
+        //       let res = arr.reduce((prev,curr) => {
+        //         return prev + curr;
+        //       })
+        //       console.log(res);
+
+// use the reduce method to calculete product of all numbers in the array.
+
+// solution : 
+        //        let n = prompt("Enter a number");
+        //        let arr = [];
+        //        for (let i = 1; i<= n; i++) {
+        //         arr[i-1] = i;
+
+        //       }
+
+
+        //      let res = arr.reduce((prev,curr) => {
+        //         return prev * curr;
+        //       })
+        //       console.log(res);
