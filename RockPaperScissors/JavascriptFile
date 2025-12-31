@@ -1,0 +1,84 @@
+let choices = document.querySelectorAll(".choice");
+let showMsg = document.querySelector("#msg");
+let userScoreCount = 0;
+let compScoreCount = 0;
+
+let compScore = document.querySelector("#comp-score");
+let userScore = document.querySelector("#user-score");
+let img = document.querySelectorAll("img");
+
+// Add border on mousedown (click start) 
+// choice.addEventListener("mousedown", () => {
+//     img.classList.add("active-border");
+// });
+// Remove border on mouseup (click release) 
+// img.addEventListener("mouseup", () => {
+//     img.classList.remove("active-border");
+// });
+// // Also remove if mouse leaves the image while pressed 
+// img.addEventListener("mouseleave", () => {
+//     img.classList.remove("active-border");
+
+// });
+
+
+const genCompChoice = () => {
+    const option = ["rock", "paper", "scissors"];
+    const randIdx = Math.floor(Math.random() * 3);
+    console.log(option[randIdx]);
+    return option[randIdx];
+}
+
+choices.forEach((choice) => {
+    choice.addEventListener("click", () => {
+        const userChoice = choice.getAttribute("id")
+        
+        playGame(userChoice);
+    });
+    
+});
+
+
+
+const gameDraw = () => {
+    showMsg.innerText = "Game was draw";
+    showMsg.style.backgroundColor = "rgba(18, 5, 5, 0.9)"
+}
+
+const playGame = (userChoice) => {
+    const compChoice = genCompChoice();
+    if (userChoice === compChoice) {
+        gameDraw();
+    }
+    else {
+        // showWinner(); Optional way
+        let userWin = true;
+        if (userChoice === "rock") {
+            userWin = compChoice === "paper" ? false : true;
+        } else if (userChoice === "paper") {
+            userWin = compChoice === "scissors" ? false : true;
+        } else {
+            userWin = compChoice === "rock" ? false : true;
+        }
+        showWinner(userWin);
+    }
+
+}
+
+const showWinner = (userWin) => {
+    if (userWin) {
+        showMsg.innerText = `You Win!`;
+        showMsg.style.backgroundColor = "green";
+        userScoreCount++;
+        userScore.innerText = userScoreCount;
+    }
+    else {
+        showMsg.innerText = ` You lose`;
+        showMsg.style.backgroundColor = "red";
+        compScoreCount++;
+        compScore.innerText = compScoreCount;
+    }
+}
+
+
+
