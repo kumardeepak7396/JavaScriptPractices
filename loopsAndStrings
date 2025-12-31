@@ -1,0 +1,180 @@
+// Loops: Loops are used to execute a piece og code again and again
+// 1. For loops
+//ex 01
+
+// for (let i = 1; i <= 5; i++) {
+//     console.log("i =", i);
+// }
+
+//ex 02
+// let sum = 0;
+// let n = 3658935636;
+// for(let i = 1; i <= n; i++){
+//     sum = sum + i;
+// }
+// console.log("sum =",sum);
+
+//2. Infinite Loops: Which loops have stoping condition infinite
+//ex 01
+//let sum = 0;
+// for(let i = 1; i >= 0; i++){
+//     sum = sum + i;
+// }
+// console.log("sum =",sum);
+
+//3. While loop: A different way to write the loop code
+// while (condition){ 
+
+//  do some work   
+
+//}
+
+//ex 01
+// let i = 1;
+// while (i <= 10){
+//     console.log("Deepak Kumar");
+//     i++;
+// }
+
+//4. do-while loop
+// let i = 1;
+// do {
+//     console.log("i=",i);
+//     i++;
+// } while (i <= 5);
+
+//5. for-of loop
+// let str = "Deepak";
+// let length = 0;
+// for (let i of str){ //Iterator
+//     console.log("i =", i);
+//     length++;
+// }
+// console.log("Length =", length);
+
+//6. For-in loop
+
+// let student = {
+//     name: "Rahul Kumar",
+//     age: 20,
+//     cgpa: 8.2,
+//     isPass: true,
+
+// };
+
+// for ( let key in student){
+//     console.log(key, student[key]);
+// }
+
+//Ques 01 - Print all even numbers from 0 to 100.
+// Ans. 
+
+// for (let i = 1; i <= 100; i++) {
+//     if ( i%2 === 0){
+//         console.log("Num =", i)
+//     }
+     
+// }
+
+//Ques 02- Create a game where you start with any random game number. Ask the user to keep guessing the number until the user corrent values.
+// Ans.
+// let gameNum = 45;
+// let userNum = prompt("Guess the number");
+
+// while (userNum != gameNum){
+//     userNum = prompt("You entered wrong number, Guess again");
+// }
+// console.log("Congratulations, You entered correct number")
+
+// Strings: String is a sequence of characters used to represent text
+
+// 1. Creating a string
+// let str = "Apna College";
+// let str2 = 'Deepak';
+
+// Some method to find value of
+
+// 1. String length
+
+// str.length
+
+// 2. Character position of string
+// str[0],str[4]
+// str[0] gives A from Apna College 
+
+// let obj = {
+//     item: "pen",
+//     price: 10,
+// };
+
+// let output = `the cost of ${obj.item} is ${obj.price} rupees`;// this is a special type of string which we call Template Literal.
+// console.log(output)
+// console.log("the cost of ",obj.item, "is",obj.price, "rupees")
+
+//Escape Character
+// First (\n): It breaks the line
+// console.log("Deepak\nKumar");
+
+//Second (\t): Put space between two characters or words
+// console.log("Deepak\tKumar")
+
+// If we count the string length with escape character, it counts as an one word, it means 'Deepak\tKumar' has 12
+// character
+
+// String Method In Javascript: These are built-in functions to manipulate a string
+
+// 1.   str.toUpperCase()
+
+//ex- 
+
+// let str = "Deepak Kumar";
+// let newstr = str.toUpperCase();
+// console.log(str);
+// console.log(newstr);
+
+// 2.    str.toLowerCase()
+// same as first method
+
+// 3.   str.trim() // removes whitespace of starting and ending
+//  let str = "   Deepak Kumar   ";
+//  console.log(str.trim());
+
+// 4.   str.slice(starting,ending): give a part of string
+
+// let str = "Deepak Kumar";
+// console.log(str.slice(3,7)); // result = pak
+
+// 5.  str1.concat(str2) // join two string
+
+// let str1 = "Deepu";
+// let str2 = " Maurya";
+
+// // let str = str1.concat(str2);
+// // console.log(str);
+
+// let str = "I am " + str1 + str2;
+// console.log(str);
+
+// 6. str.replace(searchV,PutV) and str.replaceAll()
+
+// let str = "Hello";
+// console.log(str.replace("H","Y"))
+
+// let str1 = "riright";
+// console.log(str1.replaceAll("ri","W"))
+
+// str.charAt(indx)
+
+// let str = "school";
+// console.log(str.charAt(3))
+
+// Practice-Questions: Prompt the user to enter thier full name. Generate a username for them based on the input.
+// start username with @ followed by their full name and ending with thier full length.
+
+// Solution  :
+
+      let userName = prompt("Enter Your Name");
+      let str = "@" + userName + userName.length;
+      let newstr = str.toLowerCase();
+      let res = newstr.replace(/\s+/g, "");
+      console.log(res);
