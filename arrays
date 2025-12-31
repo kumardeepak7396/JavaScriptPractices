@@ -1,0 +1,115 @@
+// Arrays : Collections of Items - It stores data in linear way(Data type - Object)
+
+// Create Arrays
+// let heroes = ["ironman","hulk","thor","batman"]
+// let marks = [55,89,34,19,90]
+
+// Arrays indices: To find any element within arrays with arrays index
+
+// let marks = [55,89,34,19,90];
+// marks[1] = 69; // We can change the value here but not directly in string- mutable
+
+// Printing arrays line by line by Loop
+
+// BY for Loop
+
+// let Name = ["Deepak","Kishan","Ram","Shyam"]
+// for (let idx=0;idx < Name.length; idx++ ){
+// console.log(Name[idx])};
+
+// By For-of loop
+// let Names = ["Deepak","Kishan","Ram","Shyam"];
+
+// for (let Name of Names){
+//     console.log(Name);
+// }
+
+// for (let Name of Names){
+//     console.log(Name.toUpperCase());
+// }
+
+
+// Let's Practice
+// Ques 01- For a given arrays with marks [85,97,44,37,76,60], find the average marks of the entire class.
+// Solution :
+//  let marks = [85,97,44,37,76,60];
+//  let sum = 85+97+44+37+76+60;
+//  let ave_marks = sum/marks.length;
+//  console.log(ave_marks);
+
+// By for-of loop
+// let marks = [85, 97, 44, 37, 76, 60];
+// let sum = 0;
+// for (let i of marks) {
+//     sum = sum + i;
+
+// }
+// let res = sum / marks.length;
+// console.log(`The ave of marks = ${res}`);
+
+// Ques 02- For a given array with prices of 5 items - [250, 645, 300, 900, 50]. All items have
+// an offer of 10% OFF on them. Change the array to store final price after applying offer.
+// Solution :
+
+// First Way           
+//let prices = [250, 645, 300, 900, 50];
+// let i = 0;
+// for (let val of prices) {
+//     div = val / 10;
+//     prices[i] = val - div;
+//     console.log(prices[i]);
+//     i++;
+// }
+
+// Second Way
+//for (let i = 0; i < prices.length; i++) {
+  //  let offer = prices[i] / 10;
+   // prices[i] -= offer;
+//}
+//console.log(prices);
+
+  
+
+
+// ARRAY METHODS : There are two types of array methods. first is that change the array and second is that gives 
+// array
+
+// 1.  Push(): Add to end
+
+//  let fooditems = ["potato","chips","burger","Samosa"];
+// fooditems.push("Jalebi","Gulabjamun");
+// console.log(fooditems);
+
+// 2.  pop() : delete from end & return
+// fooditems = ["potato","chips","burger","Samosa"];
+//  fooditems.pop();
+// console.log(fooditems);
+
+
+// 3.  toString() : convert array to string
+// console.log(fooditems.toString())
+
+// 4. Concat() : join arrays
+
+// let arr1 = [1,2,3,4]
+// let arr2 = [5,6,7]
+// let array = arr1.concat(arr2);
+
+// 5. unShift() : add to start
+// let arr1 = [1,2,3,4]
+// arr1.unshift(0);
+
+// 6. shift(); delete from start and end
+// let arr1 = [1,2,3,4];
+// arr1.shift();
+// console.log("delete", arr1)
+
+// 7. slice(startidx, endidx): return a piece of array
+
+// let arr1 = [1,2,3,4];
+// arr1.slice(1,3)
+
+// 8. splice(startidx, delCount, newEll) : change original array ( add, remove, replace)
+// let arr1 = [1,2,3,4];
+
+// arr1.splice(2,1,34,56)
