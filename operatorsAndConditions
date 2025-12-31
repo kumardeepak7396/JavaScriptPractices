@@ -1,0 +1,247 @@
+// Operators In Javascript : Used to perform on data
+
+// let a = 50;
+// let b = 10;
+//  1. Arithmetic Operators
+// console.log("a + b =", a + b);
+// console.log("a - b =", a - b);
+// console.log("a * b =", a * b);
+// console.log("a / b =", a / b);
+
+//  A. Modulus Operators
+// console.log("a % b =", a % b);
+
+//  B. Exponential Operators
+// console.log("a ** b =", a ** b);
+
+//  C. Unary Operators (There is two type)
+{
+    // let a = 5;
+    // let b = 1;
+    // console.log("a = ", a, "& b =", b);
+
+    // a--;
+    // console.log(a); //a=4 (Decrement)
+    // a++;
+    // console.log(a); //a=6 (Increment)
+}
+
+// Post Increment (a++)
+// {
+//     let a = 5;
+//     console.log("a++ =", a++);
+//     console.log("a =", a);
+
+// }
+
+// {
+//     // Pre Increment (++a)
+//     let a = 5;
+//     console.log("++a =", ++a);
+// }
+
+// Post Decrement (a--)
+// {
+//     let a = 5;
+//     console.log("a-- =", a--);
+//     console.log("a =", a);
+
+// }
+
+// Pre Decrement
+// {
+//     let a = 5;
+//     console.log("--a =", --a)
+// }
+
+// 2. Assignment Operators
+{
+    let a = 5;
+    // a += 4; // a = a + 4
+    // console.log("a =",a)
+
+    //  a -= 3; // a = a - 3
+    //  console.log("a =",a)
+
+    // a *= 5;
+    // console.log("a =",a)
+
+    // a /= 2;
+    // console.log("a =", a)
+
+    // a **= 2;
+
+}
+
+// 3. Comparison Operators (Four types)
+{
+    // Equal to (==)
+    // Not equal to (!=)
+    // Equal to & type (===)
+    // Not equal to & type (!==)
+    // let a = 4;
+    // let b = 5;
+
+    // console.log("4 == 5", a == b); false
+    // console.log("4 != 5", a != b); true
+
+    // let a = 5;
+    // let b = "5";
+    // console.log("4 == 5", a == b); true so,
+    // In this case
+    // console.log("5 === 5", a === b); Compare value and data type
+
+    // Same with (!==)
+
+    // let a = 6;
+    // let b = 4;
+    // console.log("6 > 4", a > b); true
+    // console.log("6 < 4", a < b); false
+    // console.log("6 <= 4", a <= b); false
+    // console.log("6 >= 4", a >= b); true
+
+}
+
+// 4. Logical Operator (Three types)
+// A. Logical AND (&&)
+{
+
+    // let a = 5;
+    // let b = 3;
+
+    // let cond1 = a > b; //true
+    // let cond2 = a !== b; //true
+    // console.log("cond1 && cond2 =", cond1 && cond2); // true
+    // console.log("cond1 && cond2 =", a > b && a !== b); // true
+
+    // Note-- The result will show 'True' only when the first
+    //  and the second condition would be true, otherwise result will be false.
+}
+
+// B. Logical OR (||)
+{
+    // let a = 5;
+    // let b = 3;
+
+    // let cond1 = a < b; //false
+    // let cond2 = a !== b; //true
+    // console.log("cond1 || cond2 =", cond1 || cond2); //true
+
+    // Note-- By this operator the result will show 'False' only when the first and the second both conditions are false.
+
+}
+
+// C. Logical NOT (!)
+{
+    // let a = 5;
+    // let b = 3;
+
+    // console.log("!(5 > 3) =", !(5 > 3)) // 'True' but result will be 'False'
+
+    // Note-- By this operator, you will get always opposite result.
+
+}
+
+// Conditional Statements In Javascript
+// There are three type of conditional statements
+// 1. If Statement
+{
+    // let Age = 17;
+
+    // if (Age >= 18) {
+    //     console.log("You can drive")
+    // }
+
+    // if (Age < 18){
+    //     console.log("You can't drive")
+    // }
+}
+
+{
+    // let mode = "Light";
+    // let color;
+
+    // if (mode === "Dark") {
+    //     color = "Black";
+    // }
+    // if (mode === "Light") {
+    //     color = "White"
+    // }
+
+    // console.log(color)
+}
+
+// 2. If-eles Statements
+{
+    // a = 8;
+    // b = 4;
+
+    // let number;
+    // if (a % b === 0){
+    //     number = "Even";
+    // }
+    // else {
+    //     number = "Odd";
+    // }
+    // console.log(number);
+
+
+}
+
+// 3. Else-if Statements
+
+{
+    // let mode = "Dark";
+    // let color;
+
+    // if (mode === "Dark"){
+    //     color = "Black";
+
+    // }
+    // else if (mode === "Blue"){
+    //     color = "Blue";
+    // }
+    // else {
+    //     color === "White";
+    // }
+    // console.log(color);
+}
+
+// Ternary Operators (Special Operators)
+
+{
+// let age = 17;
+// let result = age >= 18 ? "adult" : "not adult";
+// console.log(result);
+// age >= 18 ? console.log("adult") : console.log("not adult");
+// this is nothing but if-else short-form
+}
+
+// let number = prompt("Enter Your Number");
+// if (number % 5 === 0){
+//     console.log(number," a multiple of 5");
+// }
+// else {
+//     console.log(number," a not multiple of 5");
+// }
+
+// let marks = prompt("Enter Your Marks");
+// let Grade;
+
+// if (marks >= 80){
+//     Grade = "A";
+// }
+// else if (marks >= 70){
+//     Grade = "B";
+// }
+// else if (marks >= 60){
+//     Grade = "C";
+// }
+// else if (marks >= 50){
+//     Grade = "D";
+// }
+// else {
+//     Grade = "F";
+// }
+
+// console.log(Grade);
