@@ -1,0 +1,68 @@
+// Event : An event is something that happens to an HTML element, such as a click, key press, mouse move, page load, etc.
+
+// let btn = document.querySelector("button");
+// btn.onclick = () => {
+//     console.log("Button was clicked");
+//     let a = 25;
+//     a++;
+//     console.log(a);
+// }
+
+//   EVENT OBJECT : It is a special object that has details about the event. All event handlers 
+//                  have access to the event object's properties and methods.
+
+// let btn = document.querySelector("button");
+//  btn.onclick = (evt) => {
+//      console.log(evt);
+//      console.log(evt.type);
+//      console.log(evt.target);
+//  }
+
+// There are three ways for event handling
+// first Inline
+// node.event() in javascript page 
+// Third is EVENT LISTENER
+
+//  EVEN LISTENERS
+// node.addEventListener(event, callback)
+// node.removeEventlistener(event, callback)
+// *Note - The callback reference should be shame to remove.
+
+// let button = document.querySelector("button");
+// button.addEventListener("click", (e) => {
+//     console.log("Hi Deepak")
+//     console.log(e.type)
+//     console.log(e.target)
+//     console.log(e)
+// });
+
+// Practice question
+// Ques 01 - Create a toggle button that change the screen to dark mode when clicked and light mode 
+// when clicked again.
+// solution : 
+
+// let button = document.querySelector("button");
+
+// button.addEventListener("click", () => {
+//     button.innerText = button.innerText === "OFF" ? "ON" : "OFF";
+    
+//     if (button.innerText === "ON"){
+//       document.body.style.backgroundColor = "white"  
+//     }
+//     else {
+//         document.body.style.backgroundColor = "rgba(0, 0, 0, 0.821)" 
+//     }
+//     });
+
+
+let button = document.querySelector("button");
+button.addEventListener("click", () => {
+     button.innerText = button.innerText === "Dark Mode" ? "Light Mode" : "Dark Mode";
+    
+    if (button.innerText === "Light Mode"){
+      document.querySelector("body").setAttribute("class","light")
+     }
+     else {
+          document.querySelector("body").setAttribute("class","dark")
+     }
+     });
