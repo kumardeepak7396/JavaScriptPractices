@@ -1,0 +1,139 @@
+//     Window Object : The window object represents an open window in a browser. It is browser's
+//  object (not javascript) & is automatically created by browser. It is a global object with lots
+// of properties & methods.
+
+// DOM : When a browser pase is loaded, the browser creates a Document Object Model (DOM) of the page.
+// Through DOM we can dynamically changes in html.
+// ex-
+// document.body.style.background = "red";
+// document.body.childNodes[1].innerText = "abcd";
+
+// DOM MANIPULATION : SELECTORS
+
+// 1. Selecting with id
+//       document.getElementById("myId")
+
+// ex- 
+
+// let Heading = document.getElementById("heading");
+// console.dir(heading);
+
+
+
+// 2. Selecting with class
+//       document.getElementsByClassName("class")
+// ex- 
+
+// let head = document.getElementsByClassName("head-class");
+// console.log(head);
+
+// 3. Selecting with tags
+//      document.getElementsByTagName("p")
+//    ex-
+
+
+// let head = document.getElementsByTagName("h1");
+// let head = document.getElementsByTagName("p");
+// console.log(head);
+
+// 4. Selecting with query selector
+//  1.  document.querySelector("#myId/.myClass/tag")   // returns first element
+//  2.  document.querySelectorAll("#myId/.myClass/tag")  // returns a Nodelist
+
+// DOM MANIPULATION : PROPERTIES
+
+// 1. tagName : returns tag for element nodes
+
+// let res = document.querySelector("h1");
+// console.dir(res.tagName);
+
+// 2. innerText : returns all texts of the element's node and its children.
+// 3. innerHTML : returns all html words inside the node
+// 4. textContent : returns textual content even for hidden elements
+
+//   HomeWork Problems - Learning about firstchild, lastchild and type of nodes on MDN
+
+// Practice que 01 - Create a H2 heading element with text- "Hellow Javascript". Append "Apna College students" to this text 
+// using JS.
+
+// let h2 = document.querySelector("h2");
+// console.dir(h2.innerText);
+
+// h2.innerText = h2.innerText + " From Apna College";
+
+// Practice que 02 - Create 3 divs with common class name- "box". Access them & add some unique text to each of them.
+// 
+
+// let divs = document.querySelectorAll(".box");
+//  console.dir(divs);
+//  divs[0].innerText = "First";
+//  divs[1].innerText = "Second";
+//  divs[2].innerText = "Third";
+// let idx = 1;
+// for (div of divs) {
+//     div.innerText = `New unique value ${idx}`;
+//     idx++;
+//     console.log
+// }
+
+//  DOM MANIPULATION : ATTRIBUTES
+
+// getAttribute("attr") // to get the attribute value
+
+// let div = document.querySelector("div");
+// console.log(div.getAttribute("class"));
+
+// setAttribute("attr", value)
+
+// let div = document.querySelector("div");
+// console.log(div.setAttribute("class","boxc"));
+
+// STYLE : for changing styles
+//   node.style
+    // let h2 = document.querySelector("h2");
+    // h2.style.color = "red";
+    // h2.style.fontSize = "40px";
+    // h2.style.border = "1px solid black"
+
+                          // How to create and insert new element 
+                         // (let el = document.createElement("div"))
+// node.append(el) // adds at the end of node (inside)
+// node.prepend(el) // adds at the start of node (inside)
+// node.before(el) // adds before the node (outside)
+// node.after(el)  // adds after the node (outside)
+
+// let heading = document.createElement("h1");
+// heading.innerText = "Hello Javascript";
+// document.querySelector("p").before(heading);
+
+//         to remove any node we use node.remove()
+// let heading = document.createElement("h1");
+// heading.remove();
+
+//  there are two other properties 
+// one node.appendChild(el)
+// second node.removeChild(el)
+
+
+// Let's Practice
+// Ques 01- Create a new button element. Give it a text "Click Me",background color of red and text color of 
+// white.
+//           Insert the button as the first element inside the body tag.
+
+// solution :
+            //   let newButton = document.createElement("button");
+            //   newButton.innerText = "Click Me";
+
+            //   newButton.style.backgroundColor = "red";
+            //   newButton.style.color = "white";
+            //   newButton.style.height = "40px";
+            //   newButton.style.width = "60px"
+
+            //   document.querySelector("body").prepend(newButton);
+
+
+// Que 02- Create a <p> tag in html, give it a class & some styling.
+// Now create a new class in CSS and try to append this class to the <p> element.
+// solution : 
+             let p = document.querySelector("p");
+             p.classList.add("one")
