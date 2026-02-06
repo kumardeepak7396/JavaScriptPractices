@@ -1,0 +1,175 @@
+// CLASSES AND OBJECT //
+
+// const student = {
+//     fullName: 'Deepak Kumar',
+//     marks: 96.6,
+//     printMarks() {
+//         console.log("Marks = ", this.marks);
+//     }
+// }
+
+// const employee = {
+//     calcTax() {
+//         let res = this.salary - (this.salary * .1);
+//         console.log("netAmount = ", res);
+//         console.log("After deduction 10% tax.");
+
+//     }
+// }
+
+// const karanArjun = {
+//     salary: 50000,
+//     // calcTax() {
+//     //     let res = this.salary - (this.salary * .2);
+//     //     console.log("netAmount = ", res);
+//     //     console.log("After deduction 10% tax.");
+
+//     // }
+    
+// }
+
+// karanArjun.__proto__ = employee;
+
+
+//    CLASSES   //
+
+// 
+// class Student {
+//   constructor(name, age, course) {
+//     this.name = name;
+//     this.age = age;
+//     this.course = course;
+//   }
+
+//   introduce() {
+//     return `Hi, I am ${this.name} and I study ${this.course}`;
+//   }
+// }
+
+// // Creating objects
+// let s1 = new Student("Deepu", 20, "Web Development");
+// console.log(s1)
+// let s2 = new Student("Amit", 22, "Data Science");
+
+
+// INHERITANCE IN CLASSES IN JAVASCRIPT //
+
+// class student {
+//     constructor() {
+//         this.role = 'Student';
+//     }
+//     read() {
+//         console.log('Students resd.');
+//     }
+
+//     play() {
+//         console.log('Students play.');
+//     }
+// }
+
+// class boyStudent extends student {
+//     subject() {
+//         console.log('Hindi','English','Math','Science','Art');
+//     }
+// }
+
+// let studRam = new boyStudent();
+
+
+// SUPER KEYWORD //
+
+// The super keyword is used to call the constructor of its parent
+// class to access the parent's properties and methods.
+
+// class student {
+//     constructor() {
+//         console.log('Enter parent const');
+//         this.role = 'Student';
+//     }
+//     read() {
+//         console.log('Students resd.');
+//     }
+
+//     play() {
+//         console.log('Students play.');
+//     }
+// }
+
+// class boyStudent extends student {
+//     constructor() {
+//         console.log('Enter child const');
+//         super();
+//         this.subject = 'math Student';
+//         console.log('Exit child const');
+//     }
+//     subject() {
+//         console.log('Hindi','English','Math','Science','Art');
+//     }
+// }
+
+// let studRam = new boyStudent();
+
+//  Started At 5:35 PM //
+
+// class person {
+//     constructor(name) {
+//         console.log(`Welcome Mr.${name}`);
+//     }
+
+//     eat() {
+//         console.log('eat');
+//     }
+// }
+
+// class engineer extends person {
+//     constructor(name) {
+//         super(name);
+        
+//     }
+
+//     work() {
+//         super.eat();
+//         console.log('Start work');
+//     }
+// }
+
+// let indObj = new engineer('Kishan');
+
+// PRACTICE QUESTION 01: You are creating a website for your
+// college. Create a class 'User' with 2 properties, name &
+// email. It also has a method called viewData() that allows user
+// to view website data.
+
+// Solution :
+
+            //  class User {
+            //     constructor(name, email) {
+            //         this.name = name;
+            //         this.email = email;
+
+            //     }
+
+            //     viewData() {
+            //         console.log('Finding data...');
+            //     }
+            //  }
+
+             
+
+
+// Create a new class 'Admin' which inherits from User. Add a new 
+// method called editData to Admin that allows it to website data.
+
+// Solution : 
+
+            //  class Admin extends User {
+            //     constructor(name, email){
+            //         super(name, email);
+            //     }
+
+            //     editData() {
+            //         console.log('Editing your data...');
+            //     }
+            //  }
+
+            //  let user = new Admin('Hary', 'hari@company.com')
